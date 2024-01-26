@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 rounded transition font-black outline-0 duration-500;
+  }
+  .btn-green {
+    @apply bg-green-500 text-white hover:bg-green-600  ; 
+  }
+  .btn-red {
+    @apply bg-red-500 text-white hover:bg-green-600  ; 
+  }
+  .text-1 {
+    @apply xl:text-6xl md:text-4xl sm:text-2xl text-xs; 
+  }
+  .container {
+    @apply 2xl:w-w2xl xl:w-wxl lg:w-wlg md:w-wmd sm:w-wsm max-w-wall mx-auto ; 
+  }
+  .after {
+    @apply relative after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-black after:bg-opacity-20 after:z-[-1]; 
+  }
+}
+
 @tailwind utilities;
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+ul li {
+  text-decoration: none;
+  padding: 15px 0px ;
+}
+
+a { 
+  text-decoration: none;
+  padding: 5px 20px ;
+  border-radius: 20px;
+  font-weight: 900;
+}
+a:hover {
+  color: #2F2A50;
+  transition: .5s;
+}

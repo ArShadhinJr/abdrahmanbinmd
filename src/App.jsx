@@ -3,7 +3,7 @@ import Banner from "./components/Banner/Banner"
 import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer/Footer"
 import Manu from "./components/Manu/Manu"
-import Project from "./components/Project/Project"
+import Projects from "./components/Projects/Projects"
 import Testimonial from "./components/Testimonial/Testimonial"
 import TopInfo from "./components/TopInfo/TopInfo"
 
@@ -15,7 +15,7 @@ const App = () => {
       <Manu />
       <Banner/>
       <About />
-      <Project />
+      <Projects />
       <Testimonial />
       <Contact />
       <Footer/>
