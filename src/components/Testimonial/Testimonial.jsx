@@ -9,17 +9,17 @@ const Testimonial = () => {
   const testimonialsData = [
     {
       id: 1,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque.",
+      comment: "Exceptional React developer! Crafted a seamless, feature-rich chatting app. Innovative UI, robust functionalities. Highly recommend for any project!",
       userImage: 'https://source.unsplash.com/random/50x50',
-      userName: 'John Doe',
-      designation: 'CEO, ABC Company',
+      userName: 'Shakir Mahmud',
+      designation: 'CEO, ABCecho Company Ltd.',
     },
     {
       id: 2,
-      comment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      comment: "Outstanding React developer! Created an intuitive, scalable chatting app. Efficient code, prompt communication. A pleasure to work with, highly recommended.",
       userImage: 'https://source.unsplash.com/random/50x50',
-      userName: 'Jane Smith',
-      designation: 'CTO, XYZ Inc.',
+      userName: 'Talukder Rahim',
+      designation: 'CTO, XYZexx Inc.',
     },
     // Add more testimonials as needed
   ];

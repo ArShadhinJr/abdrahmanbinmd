@@ -1,7 +1,7 @@
 import myImage from '../../assets/squarePIC.jpg';
 
 const About = () => {
-  const resumeDownloadLink = 'google-drive-link';
+  const resumeDownloadLink = 'https://drive.google.com/uc?export=download&id=1QR5NGs7OEzOlFZYV7Daty0CW3NDu2Tg_';
 
   return (
     <section className="flex items-center justify-center py-16 container">
@@ -20,7 +20,6 @@ const About = () => {
         </p>
         <a
           href={resumeDownloadLink}
-          target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-500 hover:bg-blue-700 text-white hover:text-gray-100 font-bold py-2 px-4 rounded inline-block"
         >

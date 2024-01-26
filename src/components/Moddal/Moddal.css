@@ -1,0 +1,13 @@
+/* Charoukola font import */
+/* @import url('https://fonts.maateen.me/charukola-ultra-light/font.css');
+
+*/
+
+@font-face {
+    font-family: 'Charukola';
+    src: url('../../../Fonts/LiAdorNoirrit.ttf') format('truetype');
+}
+
+.font {
+    font-family: 'Charukola, sans-serif' !important;
+}

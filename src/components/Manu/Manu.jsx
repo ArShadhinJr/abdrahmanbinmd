@@ -11,10 +11,9 @@ const Menu = () => {
   return (
     <div className='bg-gray-200'>
       <nav className='flex justify-between container py-1 '>
-        {/* Logo and Title (hidden on mobile) */}
-        <div className='hidden lg:flex items-center text-3xl gap-x-3 text-secondary'>
+        <div className=' flex items-center text-3xl gap-x-3 text-secondary'>
           <img src={Logo} alt="logo" width="40px" />
-          <p className='font-black'>Abdur Rahman</p>
+          <p className='font-black hidden md:block'>Abdur Rahman</p>
         </div>
 
         {/* Mobile Toggle Button */}
