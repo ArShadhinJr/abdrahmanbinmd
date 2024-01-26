@@ -11,11 +11,12 @@ const Menu = () => {
   return (
     <div className='bg-gray-200'>
       <nav className='flex justify-between container py-1 '>
-        <div className='flex items-center text-3xl gap-x-3 text-secondary'>
+        {/* Logo and Title (hidden on mobile) */}
+        <div className='hidden lg:flex items-center text-3xl gap-x-3 text-secondary'>
           <img src={Logo} alt="logo" width="40px" />
           <p className='font-black'>Abdur Rahman</p>
         </div>
-        
+
         {/* Mobile Toggle Button */}
         <button
           className="lg:hidden p-2 focus:outline-none"
@@ -31,7 +32,7 @@ const Menu = () => {
           </svg>
         </button>
 
-        {/* Menu Items */}
+        {/* Menu Items (visible on mobile when the button is clicked) */}
         <div className={`lg:flex items-center ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
           <ul className='lg:flex items-center'>
             <li><a href="#">Home</a></li>
