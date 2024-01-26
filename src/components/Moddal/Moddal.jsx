@@ -1,7 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Modal = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
+
+  useEffect(() => {
+    // Add the 'overflow-hidden' class to the body when the modal is open
+    if (isModalOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      // Remove the 'overflow-hidden' class when the modal is closed
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Cleanup effect when component unmounts
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isModalOpen]);
 
   const closeModal = () => {
     setIsModalOpen(false);
