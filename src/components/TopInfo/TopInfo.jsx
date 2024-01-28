@@ -36,7 +36,7 @@ const TopInfo = () => {
         </div>
       </div>
       <div>
-        <ul>
+        <ul className="flex gap-x-7">
           <li>
             <a href="https://github.com/ArShadhinJr" target="_blank" rel="noreferrer">
               GitHub

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -41,10 +40,10 @@ const Contact = () => {
   return (
     <div className="container my-8">
       <h2 className="text-5xl font-bold my-6 text-center text-primary">Contact Us</h2>
-      
-      <div className='flex justify-between'>
+
+      <div className="flex flex-col md:flex-row gap-8">
         {/* First Div - Contact Form */}
-        <div className="mb-8 w-1/2">
+        <div className="mb-8 md:w-1/2">
           <form onSubmit={handleSubmit} className="flex flex-col max-w-md mx-auto">
             <label className="mb-4">
               Name:
@@ -98,17 +97,15 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        
+
         {/* Second Div - Image with Link */}
-        <div className="text-center w-1/2">
-          <div className='grid place-content-center'>
-            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://via.placeholder.com/150"  // Replace with your image URL
-                alt="Message"
-                className="mx-auto"
-              />
-            </a>
+        <div className="text-center md:w-1/2">
+          <div className="grid place-content-center">
+            <img
+              src="https://i.ibb.co/XDx1SqS/contactus.png"
+              alt="Message"
+              className="mx-auto w-1/2 object-cover"
+            />
           </div>
         </div>
       </div>
