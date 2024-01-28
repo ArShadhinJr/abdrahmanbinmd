@@ -1,0 +1,10 @@
+/* Banner.css */
+.swiper-button-next-custom,
+.swiper-button-prev-custom {
+  color: #040C2C; /* Change to your desired color */
+}
+
+.swiper-button-next-custom::after,
+.swiper-button-prev-custom::after {
+  font-size: 24px; /* Change to your desired font size */
+}

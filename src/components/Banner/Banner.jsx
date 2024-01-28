@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper/modules";
-
+import './Banner.css'; // Import your custom CSS file
 
 const Banner = () => {
   const getImageUrl = (slideIndex) => {
@@ -22,31 +22,34 @@ const Banner = () => {
 
   return (
     <Swiper
-        spaceBetween={false}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation, EffectCreative]}
-        className="mySwiper"
-        grabCursor={true}
-        effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }}
-      >
+      spaceBetween={false}
+      centeredSlides={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={{
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      }}
+      modules={[Autoplay, Pagination, Navigation, EffectCreative]}
+      className="mySwiper"
+      grabCursor={true}
+      effect={'creative'}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ['100%', 0, 0],
+        },
+      }}
+    >
       {Array.from({ length: 2 }).map((_, index) => (
         <SwiperSlide key={index}>
           <div className="relative h-56 md:h-96">
@@ -58,6 +61,8 @@ const Banner = () => {
           </div>
         </SwiperSlide>
       ))}
+      <div className="swiper-button-next swiper-button-next-custom"></div>
+      <div className="swiper-button-prev swiper-button-prev-custom"></div>
     </Swiper>
   );
 };
