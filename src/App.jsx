@@ -7,6 +7,8 @@ import Moddal from "./components/Moddal/Moddal"
 import Projects from "./components/Projects/Projects"
 import Testimonial from "./components/Testimonial/Testimonial"
 import TopInfo from "./components/TopInfo/TopInfo"
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
 
 const App = () => {
   return (

@@ -1,17 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper/modules";
+
 
 const Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % 2);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const getImageUrl = (slideIndex) => {
     // Replace these URLs with your actual image URLs
     const imageUrls = [
@@ -22,40 +21,44 @@ const Banner = () => {
   };
 
   return (
-    <section>
-      <div id="default-carousel" className="relative w-full " data-carousel="slide">
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {/* Display the current image */}
-          <img
-            src={getImageUrl(currentSlide)}
-            className="absolute block w-full h-full object-cover"
-            alt={`Banner ${currentSlide + 1}`}
-            style={{ objectFit: 'cover' }}  
-          /> 
-          {/* Previous button */}
-          <button
-            type="button"
-            className="absolute top-1/2 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none translate-y-[-50%]"
-            data-carousel-prev
-            onClick={() => setCurrentSlide((prevSlide) => (prevSlide - 1 + 2) % 2)}
-          >
-            <span className="text-white text-6xl">&#8249;</span>
-          </button>
-          {/* Next button */}
-          <button
-            type="button"
-            className="absolute top-1/2 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none translate-y-[-50%]"
-            data-carousel-next
-            onClick={() => setCurrentSlide((prevSlide) => (prevSlide + 1) % 2)}
-          >
-            <span className="text-white text-6xl">&#8250;</span>
-            
-          </button>
-          
-        </div>
-          
-      </div>
-    </section>
+    <Swiper
+        spaceBetween={false}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation, EffectCreative]}
+        className="mySwiper"
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+      >
+      {Array.from({ length: 2 }).map((_, index) => (
+        <SwiperSlide key={index}>
+          <div className="relative h-56 md:h-96">
+            <img
+              src={getImageUrl(index)}
+              className="absolute block w-full h-full object-cover"
+              alt={`Banner ${index + 1}`}
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
