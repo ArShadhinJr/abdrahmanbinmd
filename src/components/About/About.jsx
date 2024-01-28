@@ -18,7 +18,7 @@ const About = () => {
           Abdur Rahman
         </h2>
         <p className="text-lg mb-4 text-center md:text-left">
-          I'm a React expert, creating top-notch websites. I make things work smoothly, look awesome,
+          I&apos;m a React expert, creating top-notch websites. I make things work smoothly, look awesome,
           and run fast. I handle important stuff like managing information flawlessly. My websites
           are user-friendly and stunning!
         </p>
