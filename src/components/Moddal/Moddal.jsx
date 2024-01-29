@@ -27,9 +27,10 @@ const Modal = () => {
 
   // Example: Completed and Upcoming Features
   const completedFeatures = [
-    '✅ সকল সেকশন তৈরি করা হয়েছে।',
     '✅ রিজিউমি ডাউনলোড করা যাচ্ছে।',
     '✅ সকল কম্পোনেন্ট সকল ডিভাইসের জন্য রেস্পন্সিভ করা হয়েছে।',
+    '✅ স্লাইডের জন্য swiper js ব্যবহার করা হয়েছে।',
+    '✅ React-simple-typewriter ব্যবহার করা হয়েছে।',
   ];
 
   const upcomingFeatures = [
@@ -49,7 +50,7 @@ const Modal = () => {
               আসসালামু আলাইকুম। ওয়েবসাইটের কাজ চলমান রয়েছে।
             </p>
                       <p className="text-lg text-gray-700">কিছু কিছু জায়গায় ডেমো ইমেজ ব্যবহার করা হয়েছে। </p>
-                      <p className='text-center p-4 my-3 bg-primary border text-white'>ওয়েব ভার্সন ব্যবহারের অনুরোধ রইল</p>
+                      <p className='text-center p-4 my-3 bg-primary border text-white'>email js এর কাজ চলছে।</p>
 
             {/* Completed Features Section */}
             <div className="mt-4">

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* First Div - Logo and Subscription Information */}
         <div className="mb-4 md:mb-0">
-          <div className="mb-4 flex justify-center items-center md:justify-start md:items-start">
+          <div className="mb-4 flex md:flex-col  justify-center items-center md:justify-start md:items-start">
             <img
               src={Logo} 
               alt="Logo"
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
           </div>
           {/* Email Subscription Form */}
-          <form className="flex justify-center items-center md:justify-start md:items-start">
+          <form className="flex w-4/6 justify-center items-center md:justify-start md:items-start">
             <div className="flex items-center w-full">
               <input
                 type="email"

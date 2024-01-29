@@ -1,4 +1,5 @@
-import  { useState } from 'react';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,15 +12,23 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    // For example, you can log the form data:
-    console.log(formData);
-    // Show the modal
-    setIsModalOpen(true);
+
+    // Replace these values with your actual Email.js service details
+    const serviceId = 'service_s6gxld9';
+    const templateId = 'template_jsq5h1c';
+    const userId = 'w4-H4Vp9I1nRH6gMy';
+
+    // Send email using Email.js
+    emailjs.sendForm(serviceId, templateId, formData, userId)
+      .then((result) => {
+        console.log(result.text);
+        setIsModalOpen(true);
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   const closeModal = () => {
-    // Close the modal and reset form data
     setIsModalOpen(false);
     setFormData({
       name: '',
