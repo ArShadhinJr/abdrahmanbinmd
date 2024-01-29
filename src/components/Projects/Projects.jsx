@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-500 w-1/2 text-center hover:text-gray-100  text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="bg-primary hover:bg-yellow-600 text-yellow-500 hover:text-yellow-50 w-1/2 text-center px-4 py-2 rounded"
         >
           GitHub
         </a>
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
           href={liveSiteLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 w-1/2 text-center hover:text-gray-100 text-white px-4 py-2 rounded hover:bg-green-700"
+          className="bg-yellow-500 w-1/2 text-center hover:text-gray-100 text-red-700 px-4 py-2 rounded hover:bg-red-700"
         >
           Live Site
         </a>
