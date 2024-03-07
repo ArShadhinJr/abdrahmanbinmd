@@ -31,6 +31,7 @@ const Menu = () => {
           <ul className='lg:flex items-center '>
             <li><a href="#" className="text-primary hover:text-secondary">Home</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">About</a></li>
+            <li><a href="#" className="text-primary hover:text-secondary">Skills</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">Projects</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">Contact</a></li>
           </ul>
@@ -40,6 +41,7 @@ const Menu = () => {
           <ul className='lg:flex items-center  hidden'>
             <li><a href="#" className="text-primary hover:text-secondary">Home</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">About</a></li>
+            <li><a href="#" className="text-primary hover:text-secondary">Skills</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">Projects</a></li>
             <li><a href="#" className="text-primary hover:text-secondary">Contact</a></li>
           </ul>

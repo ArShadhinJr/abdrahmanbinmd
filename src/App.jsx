@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer"
 import Manu from "./components/Manu/Manu"
 import Moddal from "./components/Moddal/Moddal"
 import Projects from "./components/Projects/Projects"
+import Skills from "./components/Skills/Skills"
 import Testimonial from "./components/Testimonial/Testimonial"
 import TopInfo from "./components/TopInfo/TopInfo"
 // Import Swiper styles
@@ -19,6 +20,7 @@ const App = () => {
       <Manu />
       <Banner/>
       <About />
+      <Skills/>
       <Projects />
       <Testimonial />
       <Contact />
